@@ -1,65 +1,315 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#0a0a0f;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:24px 16px;max-width:860px;margin:0 auto}
-h1{color:#00e5ff;font-size:1.5rem;margin-bottom:6px}
-h2{color:#00e5ff;font-size:1.05rem;margin:22px 0 6px}
-h3{color:#00b8d4;font-size:.95rem;margin:14px 0 4px}
-p,li{color:#b0bec5;line-height:1.7;margin-bottom:9px;font-size:.93rem}
-ul{padding-left:20px;margin-bottom:10px}
-a{color:#00e5ff;text-decoration:none}a:hover{text-decoration:underline}
-.badge{display:inline-block;background:#00e5ff18;border:1px solid #00e5ff40;color:#00e5ff;padding:3px 10px;border-radius:20px;font-size:.78rem;margin-bottom:14px}
-.card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:18px;margin-bottom:14px}
-.nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.nav a{background:#0d1117;border:1px solid #00e5ff30;color:#00e5ff;padding:5px 13px;border-radius:8px;font-size:.82rem}
-.nav a:hover{background:#00e5ff12;text-decoration:none}
-.footer{margin-top:36px;padding-top:14px;border-top:1px solid #1e293b;color:#546e7a;font-size:.78rem}
-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:.85rem}
-th{background:#0d1117;color:#00e5ff;padding:7px 10px;text-align:left;border-bottom:1px solid #1e293b}
-td{padding:7px 10px;color:#b0bec5;border-bottom:1px solid #0d1117}
-pre{background:#0d1117;border:1px solid #1e293b;border-radius:8px;padding:14px;overflow-x:auto;margin-bottom:12px}
-code{background:#0d1117;color:#00e5ff;padding:2px 5px;border-radius:3px;font-size:.83rem}
-</style><title>Terms of Service — Butler AI</title></head><body>
-<div class="nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="privacy-policy.html">🔒 Privacy</a>
-  <a href="data-safety.html">🛡️ Data Safety</a>
-  <a href="terms.html">📜 Terms</a>
-  <a href="delete.html">🗑️ Delete Data</a>
-  <a href="licenses.html">📦 Licenses</a>
-  <a href="user-guide.html">📖 User Guide</a>
-  <a href="https://github.com/shawnjan-cmd/CommandCube" target="_blank">🐙 GitHub</a>
-</div>
-<div class="badge">Last updated: May 2026</div>
-<h1>📜 Terms of Service</h1>
-<p><strong>Butler AI — PC Remote Control</strong> (CommandCube)</p>
-<div class="card">
-  <h2>1. Acceptance</h2>
-  <p>By using Butler AI you agree to these terms. If you do not agree, do not use the app.</p>
-</div>
-<div class="card">
-  <h2>2. What the App Does</h2>
-  <p>Butler AI lets you control your own PC remotely over your local WiFi network. No cloud. No third-party servers. All communication is between your phone and your own PC.</p>
-</div>
-<div class="card">
-  <h2>3. Your Responsibility</h2>
-  <ul>
-    <li>You are solely responsible for the scripts you create and execute</li>
-    <li>You are responsible for the security of your local network</li>
-    <li>Do not use this app to access systems you do not own or have permission to control</li>
-  </ul>
-</div>
-<div class="card">
-  <h2>4. No Warranty</h2>
-  <p>The app is provided "as is" without warranty of any kind. We are not liable for any damage, data loss, or system instability resulting from use of the app.</p>
-</div>
-<div class="card">
-  <h2>5. Changes</h2>
-  <p>We may update these terms at any time. Continued use of the app constitutes acceptance of the updated terms.</p>
-</div>
-<div class="card">
-  <h2>6. Contact</h2>
-  <p><a href="mailto:andrejsladkovic1992@gmail.com">andrejsladkovic1992@gmail.com</a></p>
-</div>
-<div class="footer"><p>CommandCube · Butler AI · <a href="mailto:andrejsladkovic1992@gmail.com">andrejsladkovic1992@gmail.com</a> · <a href="https://github.com/shawnjan-cmd/CommandCube" target="_blank">GitHub</a> · <a href="index.html">All Docs</a></p></div>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Butler AI Terms of Service – Self-hosted remote PC automation. MIT server code. No cloud." />
+  <meta name="robots" content="index, follow" />
+  <title>Terms of Service – Butler AI Automation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0a0f1a;
+      color: #c8d8e8;
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    .wrap { max-width: 780px; margin: 0 auto; }
+    header {
+      background: linear-gradient(135deg, #001a28 0%, #003344 100%);
+      border-bottom: 3px solid #00ccdd;
+      padding: 36px 16px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 26px; font-weight: 800; color: #00eeff; letter-spacing: 2px; margin-bottom: 6px; }
+    header p { font-size: 13px; color: #336677; letter-spacing: 0.5px; }
+    .badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+    .badge {
+      background: rgba(0,204,221,0.12); border: 1px solid rgba(0,204,221,0.4);
+      color: #00ccdd; font-size: 11px; font-weight: 700; padding: 5px 12px;
+      border-radius: 4px; letter-spacing: 0.8px;
+    }
+    .badge.green { background: rgba(68,255,136,0.10); border-color: rgba(68,255,136,0.4); color: #44ff88; }
+    .badge.amber { background: rgba(255,140,0,0.10); border-color: rgba(255,140,0,0.4); color: #ff8c00; }
+    .badge.purple { background: rgba(136,68,204,0.12); border-color: rgba(136,68,204,0.4); color: #aa66ff; }
+    main { padding-top: 32px; }
+    .summary-box {
+      background: rgba(0,204,221,0.07); border: 1.5px solid rgba(0,204,221,0.35);
+      border-radius: 10px; padding: 22px 24px; margin-bottom: 32px;
+    }
+    .summary-box h2 { color: #44ff88; font-size: 15px; font-weight: 800; margin-bottom: 10px; letter-spacing: 1px; }
+    .summary-box p { font-size: 14px; color: #a0b8c8; margin-bottom: 8px; }
+    .summary-box ul { padding-left: 18px; margin-top: 8px; }
+    .summary-box li { font-size: 14px; color: #a0b8c8; margin-bottom: 5px; }
+    section { margin-bottom: 36px; }
+    .sec-head {
+      display: flex; align-items: center; gap: 10px;
+      border-left: 3px solid #00ccdd; padding-left: 14px;
+      margin-bottom: 16px;
+    }
+    .sec-head h2 { font-size: 15px; font-weight: 800; color: #00eeff; letter-spacing: 1px; }
+    .sec-head.amber { border-color: #ff8c00; }
+    .sec-head.amber h2 { color: #ff8c00; }
+    .sec-head.green { border-color: #44ff88; }
+    .sec-head.green h2 { color: #44ff88; }
+    .sec-head.red { border-color: #ff3300; }
+    .sec-head.red h2 { color: #ff5533; }
+    .sec-head.purple { border-color: #aa66ff; }
+    .sec-head.purple h2 { color: #aa66ff; }
+    p { font-size: 14px; color: #a0b8c8; margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { font-size: 14px; color: #a0b8c8; margin-bottom: 6px; }
+    .card {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(0,204,221,0.18);
+      border-radius: 8px; padding: 18px 20px; margin-bottom: 14px;
+    }
+    .card.amber { border-color: rgba(255,140,0,0.25); }
+    .card.green { border-color: rgba(68,255,136,0.20); }
+    .card.red { border-color: rgba(255,51,0,0.25); }
+    .card h3 { font-size: 13px; font-weight: 800; color: #00ccdd; letter-spacing: 0.8px; margin-bottom: 10px; }
+    .card.amber h3 { color: #ff8c00; }
+    .card.green h3 { color: #44ff88; }
+    .card.red h3 { color: #ff5533; }
+    .mit-box {
+      background: #050d18; border: 1px solid rgba(68,255,136,0.3);
+      border-radius: 8px; padding: 20px 22px; margin-bottom: 14px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .mit-box h3 { color: #44ff88; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+    .mit-box .year { color: #336677; font-size: 12px; margin-bottom: 14px; }
+    .mit-box p { font-size: 12px; color: #7a9ab8; line-height: 1.8; margin-bottom: 10px; }
+    .mit-condition {
+      background: rgba(68,255,136,0.06); border-left: 3px solid #44ff88;
+      padding: 12px 16px; border-radius: 4px; margin: 10px 0;
+    }
+    .mit-condition p { color: #44ff88; font-size: 12px; margin: 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    th { background: rgba(0,204,221,0.12); color: #00ccdd; font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(0,204,221,0.3); }
+    td { font-size: 13px; color: #a0b8c8; padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; }
+    .ok { color: #44ff88; font-weight: 700; }
+    .no { color: #ff5533; font-weight: 700; }
+    .contact-box {
+      background: rgba(0,204,221,0.06); border: 1.5px solid rgba(0,204,221,0.3);
+      border-radius: 10px; padding: 22px 24px; text-align: center;
+    }
+    .contact-box a { color: #00eeff; text-decoration: none; font-weight: 700; }
+    .contact-box a:hover { text-decoration: underline; }
+    footer {
+      text-align: center; font-size: 11px; color: #253545;
+      padding: 32px 0 16px; border-top: 1px solid rgba(0,204,221,0.1); margin-top: 40px;
+    }
+    footer a { color: #00ccdd; text-decoration: none; }
+    nav.doc-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+      padding: 18px 0; border-bottom: 1px solid rgba(0,204,221,0.12); margin-bottom: 28px;
+    }
+    nav.doc-nav a {
+      background: rgba(0,204,221,0.08); border: 1px solid rgba(0,204,221,0.3);
+      color: #00ccdd; font-size: 11px; font-weight: 700; padding: 6px 14px;
+      border-radius: 4px; text-decoration: none; letter-spacing: 0.5px;
+    }
+    nav.doc-nav a:hover { background: rgba(0,204,221,0.18); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>⚖️ TERMS OF SERVICE</h1>
+      <p>Butler AI: PC Automation · v5.0 · Effective April 1, 2026</p>
+      <div class="badge-row">
+        <span class="badge">SELF-HOSTED</span>
+        <span class="badge green">MIT SERVER CODE</span>
+        <span class="badge amber">NO CLOUD</span>
+        <span class="badge purple">PLAY STORE COMPLIANT</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="doc-nav">
+      <a href="index.html">🔒 Privacy Policy</a>
+      <a href="terms.html">⚖️ Terms of Service</a>
+      <a href="data-safety.html">🛡️ Data Safety</a>
+      <a href="delete-my-data.html">🗑️ Delete My Data</a>
+    </nav>
+
+    <main>
+      <div class="summary-box">
+        <h2>✅ PLAIN ENGLISH SUMMARY</h2>
+        <p>By using Butler AI, you agree to these terms. Here's what matters:</p>
+        <ul>
+          <li>The app connects <strong>only to your own PC</strong> over your local Wi-Fi network.</li>
+          <li>The server code (butler_server.py) is <strong>open source under MIT</strong> license.</li>
+          <li>You may <strong>not</strong> use this app for unauthorized access to other people's computers.</li>
+          <li>You must be <strong>18 or older</strong> to use this app.</li>
+          <li>We are <strong>not liable</strong> for any damage caused by misuse.</li>
+          <li>We can <strong>terminate access</strong> if these terms are violated.</li>
+        </ul>
+      </div>
+
+      <section>
+        <div class="sec-head">
+          <h2>1. WHAT BUTLER AI DOES</h2>
+        </div>
+        <p>Butler AI connects your Android device to a Python server (<code>butler_server.py</code>) running on your own personal computer over your local Wi-Fi network. You can send Python scripts to your PC, chat with a local AI model (Ollama), monitor system resources, and transfer files — all entirely within your own private network.</p>
+        <p>Butler AI is built for power users and developers who want to automate tasks on their own computers. It is <strong>NOT</strong> intended for unauthorized remote access to any system.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;">
+          <span class="badge">Script Execution</span>
+          <span class="badge green">Local AI Chat</span>
+          <span class="badge amber">System Monitoring</span>
+          <span class="badge">File Transfer</span>
+          <span class="badge purple">Knowledge Base</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head green">
+          <h2>2. MIT LICENSE (SERVER CODE)</h2>
+        </div>
+        <div class="mit-box">
+          <h3>MIT License</h3>
+          <p class="year">Copyright (c) 2026 Butler AI / OnSpace AI</p>
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+          <div class="mit-condition">
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+          </div>
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+        <div class="card green">
+          <h3>WHAT IS COVERED BY MIT:</h3>
+          <ul>
+            <li>butler_server.py — the Python PC server</li>
+            <li>boter_setup.sh / boter_setup.ps1 — setup scripts</li>
+            <li>install.py — installer script</li>
+            <li>butler_server.exe — compiled binary (derived from butler_server.py)</li>
+          </ul>
+        </div>
+        <div class="card amber">
+          <h3>⚠️ ANDROID APP IS PROPRIETARY:</h3>
+          <p>The Android application (APK/AAB) is <strong>proprietary and closed-source</strong>. The MIT license applies only to the Python server components listed above. The Android app source code is not released under any open-source license.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head amber">
+          <h2>3. ACCEPTABLE USE POLICY</h2>
+        </div>
+        <div class="card">
+          <h3>✅ PERMITTED USES:</h3>
+          <ul>
+            <li>Automating tasks on your own personal computer</li>
+            <li>Using the local AI chat with an Ollama model on your own PC</li>
+            <li>Monitoring your own system resources (CPU, RAM, disk)</li>
+            <li>Transferring files between your own devices over your private network</li>
+            <li>Building and running Python scripts on your own PC</li>
+            <li>Using the Knowledge Base for personal productivity</li>
+            <li>Educational use and personal experimentation</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h3>❌ STRICTLY PROHIBITED:</h3>
+          <ul>
+            <li>Connecting to any computer you do not own or have explicit written permission to access</li>
+            <li>Using the app to deploy malware, ransomware, spyware, or any harmful scripts</li>
+            <li>Attempting to exploit or compromise any system or network</li>
+            <li>Using the app in any way that violates local, national, or international laws</li>
+            <li>Redistributing the Android APK through unauthorized channels</li>
+            <li>Reverse-engineering the Android app for malicious purposes</li>
+            <li>Using the app to harm, harass, or stalk any individual</li>
+            <li>Exposing butler_server.py to the public internet without proper security measures</li>
+          </ul>
+        </div>
+        <p><strong>Violations of this policy may result in immediate termination of your access to the app and may be reported to appropriate authorities where legally required.</strong></p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>4. AGE REQUIREMENT</h2>
+        </div>
+        <p>Butler AI requires a minimum age of <strong>18 years old</strong>. This app involves technical control of computer systems, execution of code, and local network administration — activities that require adult judgment and responsibility.</p>
+        <p>By using this app, you confirm that you are at least 18 years of age. If you are under 18, please discontinue use immediately.</p>
+      </section>
+
+      <section>
+        <div class="sec-head red">
+          <h2>5. DISCLAIMER OF WARRANTIES</h2>
+        </div>
+        <p>Butler AI is provided <strong>"AS IS"</strong> without warranty of any kind. We do not warrant that:</p>
+        <ul>
+          <li>The app will be error-free or uninterrupted</li>
+          <li>Defects will be corrected</li>
+          <li>The app is free from viruses or other harmful components</li>
+          <li>The app will meet your specific requirements</li>
+        </ul>
+        <p>You assume full responsibility for any risk associated with using Butler AI and any scripts you run on your PC through this app.</p>
+      </section>
+
+      <section>
+        <div class="sec-head red">
+          <h2>6. LIMITATION OF LIABILITY</h2>
+        </div>
+        <div class="card red">
+          <h3>⚠️ IMPORTANT DISCLAIMER:</h3>
+          <p>To the maximum extent permitted by law, Butler AI and its developers shall not be liable for:</p>
+          <ul>
+            <li>Any direct, indirect, incidental, or consequential damages</li>
+            <li>Data loss, system damage, or hardware failure caused by scripts run through the app</li>
+            <li>Unauthorized access to your system if you improperly expose the server</li>
+            <li>Any financial loss resulting from app use</li>
+            <li>Damage caused by Python scripts you write and execute</li>
+          </ul>
+        </div>
+        <p>You are solely responsible for the scripts you write and execute through Butler AI. Always review scripts before running them on your system.</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>7. INTELLECTUAL PROPERTY</h2>
+        </div>
+        <table>
+          <tr><th>Component</th><th>License</th><th>Open Source?</th></tr>
+          <tr><td>butler_server.py</td><td class="ok">MIT</td><td class="ok">✅ Yes</td></tr>
+          <tr><td>Setup scripts (.sh/.ps1)</td><td class="ok">MIT</td><td class="ok">✅ Yes</td></tr>
+          <tr><td>Android App (APK/AAB)</td><td class="no">Proprietary</td><td class="no">❌ No</td></tr>
+          <tr><td>Butler AI branding/logo</td><td class="no">Proprietary</td><td class="no">❌ No</td></tr>
+          <tr><td>React Native / Expo</td><td class="ok">MIT</td><td class="ok">✅ Yes (3rd party)</td></tr>
+          <tr><td>Python dependencies</td><td class="ok">Various permissive</td><td class="ok">✅ Yes (3rd party)</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>8. TERMINATION</h2>
+        </div>
+        <p>We reserve the right to terminate or restrict your access to Butler AI at any time if you violate these Terms of Service — particularly the Acceptable Use Policy (Section 3).</p>
+        <p>You may terminate your use of Butler AI at any time by uninstalling the app. Uninstalling removes all locally stored data permanently.</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>9. CHANGES TO TERMS</h2>
+        </div>
+        <p>We may update these Terms of Service from time to time. Changes will be reflected in the "Effective Date" above and noted in Play Store release notes. Continued use of the app after changes constitutes your acceptance of the new terms.</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>10. CONTACT</h2>
+        </div>
+        <div class="contact-box">
+          <p style="margin-bottom:10px; font-size:16px; font-weight:800; color:#00eeff;">📬 GET IN TOUCH</p>
+          <p>Email: <a href="mailto:andrejsladkovic1992@gmail.com">andrejsladkovic1992@gmail.com</a></p>
+          <p style="margin-top:8px; font-size:12px; color:#336677;">App: com.butlerai.pc.automation · Teen 13+</p>
+          <p style="font-size:12px; color:#336677; margin-top:4px;">We respond to all inquiries within 48 hours.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Butler AI: PC Automation &nbsp;·&nbsp; <a href="index.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="data-safety.html">Data Safety</a> &nbsp;·&nbsp; <a href="delete-my-data.html">Delete My Data</a></p>
+      <p style="margin-top:6px;">© 2026 Butler AI / OnSpace AI &nbsp;·&nbsp; andrejsladkovic1992@gmail.com</p>
+    </footer>
+  </div>
+</body>
+</html>
