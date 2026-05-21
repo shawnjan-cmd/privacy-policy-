@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0f;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:24px 16px;max-width:860px;margin:0 auto}
+h1{color:#00e5ff;font-size:1.5rem;margin-bottom:6px}
+h2{color:#00e5ff;font-size:1.05rem;margin:22px 0 6px}
+h3{color:#00b8d4;font-size:.95rem;margin:14px 0 4px}
+p,li{color:#b0bec5;line-height:1.7;margin-bottom:9px;font-size:.93rem}
+ul{padding-left:20px;margin-bottom:10px}
+a{color:#00e5ff;text-decoration:none}a:hover{text-decoration:underline}
+.badge{display:inline-block;background:#00e5ff18;border:1px solid #00e5ff40;color:#00e5ff;padding:3px 10px;border-radius:20px;font-size:.78rem;margin-bottom:14px}
+.card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:18px;margin-bottom:14px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.nav a{background:#0d1117;border:1px solid #00e5ff30;color:#00e5ff;padding:5px 13px;border-radius:8px;font-size:.82rem}
+.nav a:hover{background:#00e5ff12;text-decoration:none}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid #1e293b;color:#546e7a;font-size:.78rem}
+table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:.85rem}
+th{background:#0d1117;color:#00e5ff;padding:7px 10px;text-align:left;border-bottom:1px solid #1e293b}
+td{padding:7px 10px;color:#b0bec5;border-bottom:1px solid #0d1117}
+pre{background:#0d1117;border:1px solid #1e293b;border-radius:8px;padding:14px;overflow-x:auto;margin-bottom:12px}
+code{background:#0d1117;color:#00e5ff;padding:2px 5px;border-radius:3px;font-size:.83rem}
+</style><title>User Guide — Butler AI</title></head><body>
+<div class="nav">
+  <a href="index.html">🏠 Home</a>
+  <a href="privacy-policy.html">🔒 Privacy</a>
+  <a href="data-safety.html">🛡️ Data Safety</a>
+  <a href="terms.html">📜 Terms</a>
+  <a href="delete.html">🗑️ Delete Data</a>
+  <a href="licenses.html">📦 Licenses</a>
+  <a href="user-guide.html">📖 User Guide</a>
+  <a href="https://github.com/shawnjan-cmd/CommandCube" target="_blank">🐙 GitHub</a>
+</div>
+<div class="badge">CommandCube · Butler AI</div>
+<h1>📖 User Guide</h1>
+<div class="card"><h2>🤖 BUTLER AI - Complete User Guide</h2>
+<br>
+<h2>🎯 What is Butler AI?</h2>
+<br>
+<p>Butler is your <strong>personal AI assistant</strong> for:</p>
+<li>✅ <strong>Script generation</strong> - Python, PowerShell, Bash</li>
+<li>✅ <strong>Bug fixing</strong> - Debug errors instantly</li>
+<li>✅ <strong>Automation ideas</strong> - Smart workflow suggestions</li>
+<li>✅ <strong>System admin help</strong> - DevOps, deployment, monitoring</li>
+<li>✅ <strong>Code explanations</strong> - Understand complex commands</li>
+<br>
+<p><strong>Powered by Groq AI (Llama 3.3 70B)</strong> + <strong>Your Personal Knowledge Base</strong></p>
+<br>
+<p>---</p>
+<br>
+<h2>🚀 Quick Start (5 Minutes)</h2>
+<br>
+<h3>**1. Start Your Server**</h3>
+<pre><code>
+# Windows (PowerShell)
+cd python_server
+$env:GROQ_API_KEY="your_groq_api_key_here"
+python botler_complete_server.py
+
+# Mac/Linux
+cd python_server
+export GROQ_API_KEY="your_groq_api_key_here"
+python botler_complete_server.py
+</pre>
+<br>
+<h3>**2. Get Your Free Groq API Key**</h3>
+<pre><code>
+1. Visit: https://console.groq.com
+2. Sign up (free account)
+3. Go to "API Keys"
+4. Create new key
+5. Copy it
+</pre>
+<br>
+<h3>**3. Connect Mobile App**</h3>
+<pre><code>
+1. Open Botler app
+2. Go to CONNECT tab
+3. Scan QR code from server
+4. See "Connected" status
+</pre>
+<br>
+<h3>**4. Start Chatting**</h3>
+<pre><code>
+1. Open BUTLER tab
+2. Type your question
+3. Get AI-powered answers
+4. Generate scripts instantly
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>💡 Example Questions to Ask Butler</h2>
+<br>
+<h3>**Script Generation**</h3>
+<pre><code>
+❓ "Generate a Python script to backup my Documents folder"
+❓ "Create a PowerShell script to monitor CPU usage"
+❓ "Write a Bash script to clean old log files"
+❓ "Build an automation script for daily reports"
+</pre>
+<br>
+<h3>**Bug Fixing**</h3>
+<pre><code>
+❓ "Fix this error: ModuleNotFoundError: No module named 'requests'"
+❓ "Why is my script timing out?"
+❓ "Debug this Python code: [paste code]"
+❓ "How do I handle file permissions errors?"
+</pre>
+<br>
+<h3>**Learning & Explanations**</h3>
+<pre><code>
+❓ "Explain what this PowerShell command does: Get-Process | Sort-Object CPU"
+❓ "What's the difference between subprocess.run() and os.system()?"
+❓ "Best practices for error handling in Python?"
+❓ "How does cron scheduling work?"
+</pre>
+<br>
+<h3>**Automation Ideas**</h3>
+<pre><code>
+❓ "How can I automate my morning routine tasks?"
+❓ "Suggest optimizations for my file backup script"
+❓ "What's the best way to schedule weekly reports?"
+❓ "Ideas for monitoring server health automatically"
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🧠 How Butler Uses Your Knowledge Base</h2>
+<br>
+<h3>**Automatic Knowledge Integration**</h3>
+<p>Every time you ask Butler a question:</p>
+<br>
+<pre><code>
+1. Butler searches your knowledge base
+2. Finds relevant research & past scripts
+3. Includes this context in the answer
+4. Gives you better, personalized responses
+</pre>
+<br>
+<h3>**Example: Before vs After Knowledge Accumulation**</h3>
+<br>
+<p><strong>First Time (No Knowledge):</strong></p>
+<pre><code>
+You: "How do I backup files in Python?"
+Butler: [Generic answer about shutil.copy()]
+</pre>
+<br>
+<p><strong>After Using App (With Knowledge):</strong></p>
+<pre><code>
+You: "How do I backup files in Python?"
+Butler: "Based on your previous file operations and system setup,
+        here's a customized backup script using the patterns you prefer:
+        
+        [Generates script tailored to your environment]
+        
+        This also handles the permission errors you encountered before..."
+</pre>
+<br>
+<h3>**What Gets Learned?**</h3>
+<li>✅ Scripts you generate</li>
+<li>✅ Errors you encounter</li>
+<li>✅ Research Butler performs</li>
+<li>✅ Automation patterns you use</li>
+<li>✅ System configurations</li>
+<li>✅ Your coding style preferences</li>
+<br>
+<p>---</p>
+<br>
+<h2>📊 Butler AI Features</h2>
+<br>
+<h3>**1. Context-Aware Responses**</h3>
+<pre><code>
+❌ Generic AI: "Here's how to backup files..."
+✅ Butler AI: "Based on your Windows 11 setup and previous scripts,
+              here's a PowerShell backup that includes the Documents
+              and Desktop folders you usually work with..."
+</pre>
+<br>
+<h3>**2. Code Quality**</h3>
+<pre><code>
+✅ Production-ready scripts
+✅ Error handling included
+✅ Security best practices
+✅ Commented code
+✅ Modern syntax (2026 standards)
+</pre>
+<br>
+<h3>**3. Multi-Language Support**</h3>
+<pre><code>
+✅ Python (recommended)
+✅ PowerShell (Windows)
+✅ Bash (Mac/Linux)
+✅ Automatic language detection
+</pre>
+<br>
+<h3>**4. Conversation Memory**</h3>
+<pre><code>
+You can have ongoing conversations:
+
+You: "Generate a backup script"
+Butler: [generates script]
+
+You: "Now add error logging"
+Butler: [updates the script with logging]
+
+You: "How do I run this on schedule?"
+Butler: [explains cron/Task Scheduler]
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🔧 Advanced Usage</h2>
+<br>
+<h3>**Share Knowledge Context**</h3>
+<pre><code>
+You can explicitly reference your knowledge:
+
+❓ "Based on my accumulated research about Python automation,
+   what's the best approach for scheduled tasks?"
+   
+Butler will search your knowledge base and give personalized advice!
+</pre>
+<br>
+<h3>**Export & Share Scripts**</h3>
+<pre><code>
+After Butler generates a script:
+
+1. Copy to clipboard
+2. Go to SCRIPTS tab
+3. Tap "New Script"
+4. Paste and save
+5. Execute from mobile or schedule it
+</pre>
+<br>
+<h3>**Learning from Errors**</h3>
+<pre><code>
+When you encounter errors:
+
+1. Screenshot or copy error message
+2. Ask Butler: "Fix this error: [paste error]"
+3. Butler analyzes and suggests fixes
+4. Error pattern gets added to knowledge base
+5. Future similar errors get auto-detected
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>📱 Butler UI Features</h2>
+<br>
+<h3>**Visual Indicators**</h3>
+<li>🟢 <strong>Green Dot</strong> = Connected to server</li>
+<li>🔴 <strong>Red Dot</strong> = Offline mode</li>
+<li>🧠 <strong>Brain Badge</strong> = Knowledge base used (shows count)</li>
+<li>⏳ <strong>Typing Dots</strong> = Butler is thinking</li>
+<li>📊 <strong>Knowledge Banner</strong> = Shows total accumulated findings</li>
+<br>
+<h3>**Message Features**</h3>
+<li>✅ Timestamps on all messages</li>
+<li>✅ Copy any message (long press)</li>
+<li>✅ Terminal-style formatting</li>
+<li>✅ Syntax highlighting</li>
+<li>✅ Auto-scroll to latest</li>
+<li>✅ Conversation history saved</li>
+<br>
+<h3>**Search History**</h3>
+<pre><code>
+1. Tap search icon
+2. Filter past conversations
+3. Jump to previous solutions
+4. Reuse successful scripts
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🎓 Best Practices</h2>
+<br>
+<h3>**1. Be Specific**</h3>
+<pre><code>
+❌ "Help with files"
+✅ "Generate Python script to backup .docx files from Documents to OneDrive"
+</pre>
+<br>
+<h3>**2. Provide Context**</h3>
+<pre><code>
+❌ "Fix my script"
+✅ "Fix this Python backup script that's giving FileNotFoundError:
+   [paste script and error]"
+</pre>
+<br>
+<h3>**3. Use Follow-Ups**</h3>
+<pre><code>
+After getting a script:
+• "Explain line 15"
+• "Add error handling"
+• "How do I run this daily?"
+• "Optimize for large files"
+</pre>
+<br>
+<h3>**4. Save Good Scripts**</h3>
+<pre><code>
+When Butler generates useful code:
+1. Test it (SCRIPTS tab)
+2. Save to library
+3. Add to favorites
+4. Schedule if needed
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🔍 Troubleshooting</h2>
+<br>
+<h3>**"Butler not responding"**</h3>
+<pre><code>
+1. Check connection status (🟢 = good, 🔴 = bad)
+2. Verify server is running
+3. Check GROQ_API_KEY is set
+4. Look at server terminal for errors
+</pre>
+<br>
+<h3>**"Connection Required" message**</h3>
+<pre><code>
+1. Go to CONNECT tab
+2. Scan QR code from server
+3. Or manually enter IP and port
+4. Tap "Connect"
+</pre>
+<br>
+<h3>**"AI request failed"**</h3>
+<pre><code>
+Possible causes:
+• GROQ_API_KEY not set
+• Internet connection down
+• Firewall blocking server
+• Groq API rate limit hit (free tier: 30 req/min)
+
+Fix:
+1. Check server terminal for error details
+2. Verify API key is correct
+3. Wait 1 minute if rate limited
+</pre>
+<br>
+<h3>**"Generic responses instead of personalized"**</h3>
+<pre><code>
+1. Use the app more (Butler learns from usage)
+2. Check KNOWLEDGE tab - should have findings
+3. Generate some scripts to build knowledge base
+4. Wait for auto-sync (every 30 min)
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>📈 Measuring Butler's Intelligence</h2>
+<br>
+<h3>**Knowledge Stats**</h3>
+<pre><code>
+Go to KNOWLEDGE tab to see:
+• Total findings accumulated
+• Number of domains learned
+• Compression ratio (70-90%)
+• Server sync status
+</pre>
+<br>
+<h3>**Butler Gets Smarter Over Time**</h3>
+<pre><code>
+Week 1:  5 findings  → Generic responses
+Week 2:  50 findings → Starting to personalize
+Month 1: 200 findings → Very context-aware
+Month 3: 500+ findings → Expert in your workflows!
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🚀 Pro Tips</h2>
+<br>
+<h3>**1. Train Butler on Your Style**</h3>
+<pre><code>
+Generate multiple scripts for similar tasks.
+Butler will learn:
+• Your preferred libraries
+• Your error handling patterns
+• Your naming conventions
+• Your documentation style
+</pre>
+<br>
+<h3>**2. Use Butler as Documentation**</h3>
+<pre><code>
+Ask Butler to explain complex code you wrote months ago.
+He'll reference your knowledge base to understand context!
+</pre>
+<br>
+<h3>**3. Combine Butler + Scripts Tab**</h3>
+<pre><code>
+1. Butler generates script
+2. Test in SCRIPTS tab
+3. Debug with Butler if needed
+4. Save to library
+5. Schedule for automation
+</pre>
+<br>
+<h3>**4. Export Knowledge Base**</h3>
+<pre><code>
+1. Go to KNOWLEDGE tab
+2. Tap "Export JSON"
+3. Save backup to cloud
+4. Import on new device
+5. Butler retains all learning!
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🎯 Success Stories (What You'll Achieve)</h2>
+<br>
+<h3>**Before Botler Butler:**</h3>
+<pre><code>
+❌ Googling for 30 minutes
+❌ Copy-pasting broken scripts
+❌ Trial and error debugging
+❌ Forgetting past solutions
+❌ Starting from scratch every time
+</pre>
+<br>
+<h3>**After Botler Butler:**</h3>
+<pre><code>
+✅ Ask Butler → Get working script in 10 seconds
+✅ Butler remembers your environment
+✅ Errors auto-explained with fixes
+✅ Past solutions instantly recalled
+✅ Continuously improving AI assistant
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🔐 Privacy & Security</h2>
+<br>
+<h3>**Your Data**</h3>
+<li>✅ <strong>Knowledge Base</strong>: Stored locally on your device + your PC server</li>
+<li>✅ <strong>Conversations</strong>: Saved locally only</li>
+<li>✅ <strong>Server</strong>: Runs on YOUR computer (not cloud)</li>
+<li>✅ <strong>AI Queries</strong>: Sent to Groq (encrypted HTTPS)</li>
+<br>
+<h3>**What Groq Sees**</h3>
+<pre><code>
+• Your question
+• Knowledge context (only relevant excerpts)
+• Conversation history
+
+What they DON'T see:
+• Your files
+• Your scripts (unless you paste them)
+• Your system details
+• Other conversations
+</pre>
+<br>
+<h3>**Offline Mode**</h3>
+<pre><code>
+Butler can work offline for:
+• Knowledge base browsing
+• Conversation history
+• Script library
+
+Requires internet for:
+• AI responses (Groq API)
+• Knowledge sync to server
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>📞 Getting Help</h2>
+<br>
+<h3>**Server Logs**</h3>
+<pre><code>
+Check terminal where server is running:
+• Green = Success
+• Red = Errors
+• Yellow = Warnings
+</pre>
+<br>
+<h3>**App Diagnostics**</h3>
+<pre><code>
+1. Go to SETTINGS tab
+2. Tap "Run Health Check"
+3. View connection status
+4. Export logs if needed
+</pre>
+<br>
+<h3>**Common Fixes**</h3>
+<pre><code>
+90% of issues fixed by:
+1. Restart server
+2. Reconnect mobile app
+3. Check internet connection
+4. Verify GROQ_API_KEY is set
+</pre>
+<br>
+<p>---</p>
+<br>
+<h2>🎉 Summary</h2>
+<br>
+<p><strong>Butler AI is YOUR personal coding assistant that:</strong></p>
+<br>
+<p>✅ Generates production-ready scripts in seconds</p>
+<p>✅ Learns from your usage patterns</p>
+<p>✅ Remembers past solutions</p>
+<p>✅ Fixes bugs automatically</p>
+<p>✅ Gets smarter every day</p>
+<br>
+<p><strong>All you need:</strong></p>
+<p>1. Python server running (free)</p>
+<p>2. Groq API key (free tier: 30 requests/min)</p>
+<p>3. Internet connection</p>
+<p>4. Questions to ask!</p>
+<br>
+<p><strong>Start chatting with Butler now!</strong> 🚀</p>
+<br></div>
+<div class="footer"><p>CommandCube · Butler AI · <a href="mailto:andrejsladkovic1992@gmail.com">andrejsladkovic1992@gmail.com</a> · <a href="https://github.com/shawnjan-cmd/CommandCube" target="_blank">GitHub</a> · <a href="index.html">All Docs</a></p></div>
+</body></html>
